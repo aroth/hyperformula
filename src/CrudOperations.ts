@@ -359,7 +359,7 @@ export class CrudOperations {
 
   public undo() {
     if (this.undoRedo.isUndoStackEmpty()) {
-      throw new NoOperationToUndoError()
+      return;
     }
     this.clipboardOperations.abortCut()
     this.undoRedo.undo()
@@ -367,7 +367,7 @@ export class CrudOperations {
 
   public redo() {
     if (this.undoRedo.isRedoStackEmpty()) {
-      throw new NoOperationToRedoError()
+      return;
     }
     this.clipboardOperations.abortCut()
     this.undoRedo.redo()

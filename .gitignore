@@ -13,7 +13,6 @@ languages/
 test-jasmine/
 test-jest/
 node_modules/
-typings/
 
 *.iml
 dev*.html
